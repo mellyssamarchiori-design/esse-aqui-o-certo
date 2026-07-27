@@ -1,46 +1,701 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-        <title>Blog</title>
-        <style>
-            header{
-                background-color: rgba(5, 87, 66, 0.63);
-                color: rgba(139, 0, 0, 0.705);
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-                border: 5px salmon;
-            }
-            main{
-                background-color: rgba(227, 215, 250, 0.404);
-                color: rgba(0, 4, 255, 0.438);
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-                border: 5px rgba(161, 40, 40, 0.651);
-                
-            }
-        </style>
-    </head>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Apoio ao Estudante | Combate à Violência contra a Mulher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
-    <header>
-        <h1>A agricultura no Paraná</h1>
-        <p>Vou compartilhar conhecimentos sobre tecnologia na agricultura</p>
-    </header>
-     <main>
-        <img scr="imagem-blog.png" alt="">
-        <h2>A agricultura no Paraná</h2>
-        <p>Por: Mellyssa Marchiori</p>
-        <p>Agricultura esta muito avançada.</p>
 
-</main>
+    <div class="accessibility-bar">
+        <button id="btn-contrast" title="Alto Contraste"><i class="fas fa-adjust"></i> Contraste</button>
+        <button id="btn-theme" title="Modo Escuro/Claro"><i class="fas fa-moon"></i> Modo Escuro</button>
+        <button id="btn-increase-font" title="Aumentar Fonte"><i class="fas fa-text-height"></i> A+</button>
+        <button id="btn-decrease-font" title="Diminuir Fonte"><i class="fas fa-text-height"></i> A-</button>
+    </div>
+
+    <header class="main-header">
+        <div class="logo">
+            <i class="fas fa-hands-holding-heart"></i>
+            <span>Portal Apoio</span>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#inicio"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#sobre"><i class="fas fa-info-circle"></i> O Tema</a></li>
+                <li><a href="#escuta"><i class="fas fa-heart"></i> Portal de Escuta</a></li>
+                <li><a href="#quiz"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="#referencias"><i class="fas fa-book"></i> Referências</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1>Portal de Apoio ao Estudante</h1>
+            <p class="hero-subtitle">Respeito, Empatia e Conscientização contra a Violência de Gênero</p>
+            <div class="welcome-box">
+                <p>"Bem-vindo ao Portal de Apoio ao Estudante. Aqui você encontrará informações, orientações e apoio sobre situações vivenciadas no ambiente escolar e na sociedade. Você não está só!"</p>
+            </div>
+            <a href="#escuta" class="btn-primary">Precisa de Escuta? Clique Aqui</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Estudantes conversando e se apoiando no ambiente escolar">
+        </div>
+    </section>
+
+    <section id="sobre" class="content-section">
+        <h2 class="section-title"><i class="fas fa-shield-alt"></i> Violência Contra a Mulher: Entender para Combater</h2>
+        <p class="section-intro">A violência de gênero afeta a vida de muitas jovens e famílias. No ambiente escolar, cultivar o respeito, a empatia e identificar sinais de violência ou relacionamentos abusivos é fundamental para construir um espaço seguro.</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <i class="fas fa-user-slash card-icon"></i>
+                <h3>Violência Física</h3>
+                <p>Qualquer conduta que ofenda a integridade ou a saúde corporal da mulher.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-comment-slash card-icon"></i>
+                <h3>Violência Psicológica</h3>
+                <p>Humilhações, ameaças, isolamento, controle de amizades e manipulação emocional.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mobile-alt card-icon"></i>
+                <h3>Violência Virtual / Cyberbullying</h3>
+                <p>Divulgação não autorizada de fotos privadas, ofensas e perseguição em redes sociais.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-gavel card-icon"></i>
+                <h3>Lei Maria da Penha</h3>
+                <p>Legislação brasileira (Lei nº 11.340/2006) que protege mulheres contra a violência doméstica e familiar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="escuta" class="content-section escuta-bg">
+        <h2 class="section-title"><i class="fas fa-comments"></i> Portal de Escuta</h2>
+        <p class="section-intro">Este é um espaço seguro e simulação de acolhimento. Escreva seu desabafo ou dúvida abaixo.</p>
+
+        <div class="escuta-container">
+            <div class="escuta-card">
+                <h3>Espaço para Desabafo (Simulação)</h3>
+                <form id="form-escuta">
+                    <div class="form-group">
+                        <label for="nome">Como gostaria de ser chamado(a)? (Opcional):</label>
+                        <input type="text" id="nome" placeholder="Seu nome ou apelido">
+                    </div>
+                    <div class="form-group">
+                        <label for="desabafo">Escreva sua mensagem ou desabafo:</label>
+                        <textarea id="desabafo" rows="5" required placeholder="Sinta-se à vontade para compartilhar o que está sentindo..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Enviar Mensagem</button>
+                </form>
+
+                <div id="resposta-escuta" class="resposta-box hidden"></div>
+            </div>
+
+            <div class="orientacoes-card">
+                <h3><i class="fas fa-hands-helping"></i> Onde buscar ajuda real?</h3>
+                <p>Se você ou alguma amiga está passando por dificuldades, procure pessoas de confiança:</p>
+                <ul>
+                    <li><i class="fas fa-chalkboard-teacher"></i> Professores, pedagogos ou direção da escola.</li>
+                    <li><i class="fas fa-user-shield"></i> Familiares ou adultos de confiança.</li>
+                    <li><i class="fas fa-phone-alt"></i> <strong>Ligue 180:</strong> Central de Atendimento à Mulher (gratuito e 24h).</li>
+                    <li><i class="fas fa-phone-square"></i> <strong>Ligue 190:</strong> Polícia Militar (em casos de emergência).</li>
+                    <li><i class="fas fa-headset"></i> <strong>Ligue 188:</strong> CVV (Apoio Emocional gratuito).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="content-section">
+        <h2 class="section-title"><i class="fas fa-vial"></i> Quiz Interativo: O que você faria?</h2>
+        <p class="section-intro">Teste seus conhecimentos sobre respeito, empatia e atitudes corretas no dia a dia.</p>
+
+        <div class="quiz-container">
+            <div id="quiz-box">
+                </div>
+            <button id="btn-submit-quiz" class="btn-primary">Verificar Resultados</button>
+            <div id="quiz-result" class="result-box hidden"></div>
+        </div>
+    </section>
+
+    <section id="referencias" class="content-section">
+        <h2 class="section-title"><i class="fas fa-bookmark"></i> Referências e Fontes Confiáveis</h2>
+        <p class="section-intro">Consulte materiais oficiais sobre direitos humanos e proteção à mulher:</p>
+
+        <ul class="references-list">
+            <li>
+                <i class="fas fa-external-link-alt"></i>
+                <a href="https://www.gov.br/mdh/pt-br/assuntos/mulheres" target="_blank" rel="noopener">Ministério das Mulheres - Governo Federal</a>
+            </li>
+            <li>
+                <i class="fas fa-external-link-alt"></i>
+                <a href="https://www.cnj.jus.br/programas-e-acoes/violencia-contra-a-mulher/" target="_blank" rel="noopener">Conselho Nacional de Justiça (CNJ) - Combate à Violência Doméstica</a>
+            </li>
+            <li>
+                <i class="fas fa-external-link-alt"></i>
+                <a href="https://www.unicef.org/brazil/comunicacao-nao-violenta-e-prevencao-de-violencias" target="_blank" rel="noopener">UNICEF Brasil - Prevenção de Violências e Apoio aos Jovens</a>
+            </li>
+            <li>
+                <i class="fas fa-external-link-alt"></i>
+                <a href="https://www.institutomaria-da-penha.org.br/" target="_blank" rel="noopener">Instituto Maria da Penha</a>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Portal de Apoio ao Estudante — Projeto Educativo e Conscientização.</p>
+    </footer>
+
+    <button id="btn-top" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
 </body>
- 
-    <button>❤️<span>0</span></button>
-<button>❤️<span>0</span></button>
-<button>❤️<span>0</span></button>
-<button>��<span>0</span></button>
+</html>
+
+
+/* RESET E VARIÁVEIS DE CORES */
+:root {
+    --primary-color: #6b2d5c;
+    --secondary-color: #4a154b;
+    --accent-color: #d9534f;
+    --bg-color: #f9f8fc;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --light-purple: #e8d5e5;
+    --border-color: #ddd;
+    --font-size-base: 16px;
+}
+
+/* MODO ESCURO */
+body.dark-theme {
+    --bg-color: #1a1a24;
+    --card-bg: #272736;
+    --text-color: #f0f0f5;
+    --light-purple: #3a2538;
+    --border-color: #444;
+}
+
+/* ALTO CONTRASTE */
+body.high-contrast {
+    --bg-color: #000000 !important;
+    --card-bg: #111111 !important;
+    --text-color: #ffff00 !important;
+    --primary-color: #ffff00 !important;
+    --secondary-color: #ffffff !important;
+    --accent-color: #ff0000 !important;
+    --border-color: #ffffff !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--font-size-base);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* BARRA DE ACESSIBILIDADE */
+.accessibility-bar {
+    background-color: var(--secondary-color);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.accessibility-bar button {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.accessibility-bar button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* CABEÇALHO E MENU */
+.main-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-menu a:hover {
+    color: var(--light-purple);
+}
+
+/* HERO SECTION (INÍCIO) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.welcome-box {
+    background-color: var(--light-purple);
+    padding: 1.2rem;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* SEÇÕES GENÉRICAS */
+.content-section {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.section-intro {
+    margin-bottom: 2rem;
+}
+
+/* CARDS GRID */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* PORTAL DE ESCUTA */
+.escuta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.escuta-card, .orientacoes-card {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.resposta-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: var(--light-purple);
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.orientacoes-card ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.orientacoes-card li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* QUIZ */
+.quiz-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.quiz-item p {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.quiz-options label {
+    display: block;
+    margin-bottom: 0.4rem;
+    cursor: pointer;
+}
+
+.result-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: var(--light-purple);
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* REFERÊNCIAS */
+.references-list {
+    list-style: none;
+}
+
+.references-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.references-list a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.references-list a:hover {
+    text-decoration: underline;
+}
+
+/* RODAPÉ */
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    margin-top: 4rem;
+}
+
+/* BOTÃO VOLTAR AO TOPO */
+#btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: none;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .escuta-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    /* --- 1. ACESSIBILIDADE E TEMAS --- */
+    const btnTheme = document.getElementById('btn-theme');
+    const btnContrast = document.getElementById('btn-contrast');
+    const btnIncreaseFont = document.getElementById('btn-increase-font');
+    const btnDecreaseFont = document.getElementById('btn-decrease-font');
+    let currentFontSize = 16;
+
+    // Modo Escuro
+    btnTheme.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.remove('high-contrast');
+    });
+
+    // Alto Contraste
+    btnContrast.addEventListener('click', () => {
+        document.body.classList.toggle('high-contrast');
+        document.body.classList.remove('dark-theme');
+    });
+
+    // Controle de Tamanho da Fonte
+    btnIncreaseFont.addEventListener('click', () => {
+        if (currentFontSize < 22) {
+            currentFontSize += 2;
+            document.documentElement.style.fontSize = `${currentFontSize}px`;
+        }
+    });
+
+    btnDecreaseFont.addEventListener('click', () => {
+        if (currentFontSize > 12) {
+            currentFontSize -= 2;
+            document.documentElement.style.fontSize = `${currentFontSize}px`;
+        }
+    });
+
+
+    /* --- 2. PORTAL DE ESCUTA (FORMULÁRIO SIMULADO) --- */
+    const formEscuta = document.getElementById('form-escuta');
+    const respostaEscuta = document.getElementById('resposta-escuta');
+
+    const frasesMotivacionais = [
+        "Sua voz importa e você merece ser ouvida e respeitada.",
+        "Não tenha medo de pedir ajuda. Buscar apoio é um ato de coragem.",
+        "Você não está sozinha. Existem pessoas preparadas para caminhar ao seu lado.",
+        "Um ambiente escolar seguro é construído com empatia e acolhimento."
+    ];
+
+    formEscuta.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const nomeInput = document.getElementById('nome').value.trim();
+        const nome = nomeInput ? nomeInput : 'Estudante';
+        const fraseAleatoria = frasesMotivacionais[Math.floor(Math.random() * frasesMotivacionais.length)];
+
+        respostaEscuta.innerHTML = `
+            <h4><i class="fas fa-heart"></i> Mensagem para você, ${nome}:</h4>
+            <p style="margin: 0.8rem 0;"><em>"${fraseAleatoria}"</em></p>
+            <p>Obrigado por compartilhar. Lembramos que esta é uma simulação, mas sua saúde emocional é real. Se precisar conversar, procure um professor, pedagogo ou ligue para o <strong>180</strong>.</p>
+        `;
+        
+        respostaEscuta.classList.remove('hidden');
+        formEscuta.reset();
+    });
+
+
+    /* --- 3. QUIZ INTERATIVO (5 PERGUNTAS) --- */
+    const quizQuestions = [
+        {
+            question: "1. Um colega constantemente zomba da aparência de uma estudante na sala de aula. Essa atitude é considerada:",
+            options: ["Brincadeira inofensiva", "Bullying e desrespeito", "Algo normal entre jovens"],
+            answer: 1
+        },
+        {
+            question: "2. Em um relacionamento, se o namorado exige ver as conversas do celular da namorada, isso demonstra:",
+            options: ["Cuidado e amor", "Uma atitude saudável", "Comportamento abusivo e invasão de privacidade"],
+            answer: 2
+        },
+        {
+            question: "3. Se você presenciar uma situação de assédio ou violência na escola, qual é a atitude correta?",
+            options: ["Gravar um vídeo e postar nas redes sociais", "Avisar imediatamente a direção, pedagogo ou professor", "Ignorar e não se envolver"],
+            answer: 1
+        },
+        {
+            question: "4. Qual é o número gratuito e nacional para denúncias e ajuda à mulher em situação de violência?",
+            options: ["Ligue 180", "Ligue 190", "Ligue 100"],
+            answer: 0
+        },
+        {
+            question: "5. Para manter suas contas e dados seguros na internet, qual é a melhor prática de senha?",
+            options: ["Usar '123456' ou sua data de nascimento", "Uma senha longa misturando letras, números e símbolos", "Compartilhar a senha com amigos de confiança"],
+            answer: 1
+        }
+    ];
+
+    const quizBox = document.getElementById('quiz-box');
+    const btnSubmitQuiz = document.getElementById('btn-submit-quiz');
+    const quizResult = document.getElementById('quiz-result');
+
+    // Renderizar o Quiz
+    function renderQuiz() {
+        quizBox.innerHTML = '';
+        quizQuestions.forEach((q, index) => {
+            const item = document.createElement('div');
+            item.className = 'quiz-item';
+            
+            let optionsHTML = '';
+            q.options.forEach((opt, optIndex) => {
+                optionsHTML += `
+                    <label>
+                        <input type="radio" name="q${index}" value="${optIndex}">
+                        ${opt}
+                    </label>
+                `;
+            });
+
+            item.innerHTML = `<p>${q.question}</p><div class="quiz-options">${optionsHTML}</div>`;
+            quizBox.appendChild(item);
+        });
+    }
+
+    renderQuiz();
+
+    // Validar Quiz
+    btnSubmitQuiz.addEventListener('click', () => {
+        let score = 0;
+        let total = quizQuestions.length;
+
+        quizQuestions.forEach((q, index) => {
+            const selected = document.querySelector(`input[name="q${index}"]:checked`);
+            if (selected && parseInt(selected.value) === q.answer) {
+                score++;
+            }
+        });
+
+        quizResult.innerHTML = `<i class="fas fa-trophy"></i> Você acertou ${score} de ${total} perguntas!`;
+        if (score === total) {
+            quizResult.innerHTML += "<br>Parabéns! Você tem um ótimo conhecimento sobre empatia e respeito!";
+        } else {
+            quizResult.innerHTML += "<br>Continue se informando em nosso portal para aprender ainda mais!";
+        }
+        quizResult.classList.remove('hidden');
+    });
+
+
+    /* --- 4. BOTÃO VOLTAR AO TOPO --- */
+    const btnTop = document.getElementById('btn-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            btnTop.style.display = 'block';
+        } else {
+            btnTop.style.display = 'none';
+        }
+    });
+
+    btnTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+});
