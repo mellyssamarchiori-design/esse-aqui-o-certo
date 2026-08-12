@@ -190,3 +190,245 @@ Procure tambem Delegacias Especializadas de Atendimento a Mulher,
 Defensorias Publicas, Ministerios Publicos e servicos de assistencia social
 do seu municipio.
 </p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conscientização e Apoio à Mulher</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdfbfb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Banner de Alerta Fixo Topo */
+        .top-alert {
+            background-color: #d9534f;
+            color: white;
+            text-align: center;
+            padding: 0.8rem 1rem;
+            font-size: 0.95rem;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Hero Section (Com imagem de fundo) */
+        .hero {
+            background: linear-gradient(rgba(107, 45, 92, 0.85), rgba(107, 45, 92, 0.85)), 
+                        url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #6b2d5c;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        /* Grid de Tipos de Violência com Imagens */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 1.2rem;
+        }
+        .card-body h3 {
+            color: #6b2d5c;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Seção Ciclo da Violência */
+        .cycle-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+        }
+        .cycle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .cycle-box {
+            background-color: #f8f1f6;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid #6b2d5c;
+        }
+
+        /* Canais de Ajuda */
+        .help-section {
+            background-color: #6b2d5c;
+            color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .help-contacts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            min-width: 200px;
+        }
+        .contact-item h3 {
+            font-size: 2rem;
+            color: #ffd700;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #222;
+            color: #bbb;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-alert">
+        🚨 EM CASO DE EMERGÊNCIA: LIGUE 190 (POLÍCIA MILITAR) OU 180 (CENTRAL DE ATENDIMENTO À MULHER)
+    </div>
+
+    <header class="hero">
+        <h1>Você Não Está Sozinha</h1>
+        <p>Informação, apoio e conscientização para romper o ciclo da violência e salvar vidas.</p>
+    </header>
+
+    <div class="container">
+
+        <h2 class="section-title">Conheça os Tipos de Violência</h2>
+        <div class="grid-cards">
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1590086782792-42dd235c149d?auto=format&fit=crop&w=500&q=80" alt="Violência Física">
+                <div class="card-body">
+                    <h3>Física</h3>
+                    <p>Qualquer conduta que ofenda a integridade ou a saúde corporal da mulher.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541199249251-f713e6145474?auto=format&fit=crop&w=500&q=80" alt="Violência Psicológica">
+                <div class="card-body">
+                    <h3>Psicológica</h3>
+                    <p>Causa dano emocional, diminuição da autoestima, controle de ações ou ameaças.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?auto=format&fit=crop&w=500&q=80" alt="Violência Patrimonial">
+                <div class="card-body">
+                    <h3>Patrimonial</h3>
+                    <p>Retenção, destruição ou subtração de bens, instrumentos de trabalho ou documentos.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cycle-section">
+            <h2 class="section-title" style="margin-bottom:0.5rem;">O Ciclo da Violência</h2>
+            <p style="text-align: center; color: #666;">Entenda as três fases recorrentes em relacionamentos abusivos:</p>
+            
+            <div class="cycle-grid">
+                <div class="cycle-box">
+                    <h3>1. Aumento da Tensão</h3>
+                    <p>Irritabilidade sem motivo aparente, insultos, ameaças verbais e criação de um ambiente de medo.</p>
+                </div>
+
+                <div class="cycle-box">
+                    <h3>2. A Explosão</h3>
+                    <p>Fase crítica em que ocorre a agressão direta (física, psicológica, verbal ou sexual).</p>
+                </div>
+
+                <div class="cycle-box">
+                    <h3>3. Lua de Mel</h3>
+                    <p>O agressor demonstra arrependimento, pede desculpas e promete mudanças até o ciclo reiniciar.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="help-section">
+            <h2>Onde Buscar Ajuda?</h2>
+            <p>Atendimento gratuito, confidencial e disponível 24 horas por dia.</p>
+            
+            <div class="help-contacts">
+                <div class="contact-item">
+                    <h3>180</h3>
+                    <p>Central de Atendimento à Mulher</p>
+                </div>
+                <div class="contact-item">
+                    <h3>190</h3>
+                    <p>Polícia Militar (Emergências)</p>
+                </div>
+                <div class="contact-item">
+                    <h3>DEAM</h3>
+                    <p>Delegacia Especializada de Atendimento à Mulher</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Projeto de Conscientização e Apoio à Mulher. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
